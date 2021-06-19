@@ -15,7 +15,7 @@ class TV extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            modifiedText(
+            ModifiedText(
               text: "Popular Tv Shows",
               size: 26,
               color: Colors.white,
@@ -70,7 +70,7 @@ class TV extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Container(
-                                    child: modifiedText(
+                                    child: ModifiedText(
                                       text: tvs[index]['original_name'] != null
                                           ? tvs[index]['original_name']
                                           : 'Loading',
