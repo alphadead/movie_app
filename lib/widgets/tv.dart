@@ -18,6 +18,7 @@ class TV extends StatelessWidget {
             modifiedText(
               text: "Popular Tv Shows",
               size: 26,
+              color: Colors.white,
             ),
             SizedBox(
               height: 10,
@@ -73,6 +74,8 @@ class TV extends StatelessWidget {
                                       text: tvs[index]['original_name'] != null
                                           ? tvs[index]['original_name']
                                           : 'Loading',
+                                      color: Colors.white,
+                                      size: 20,
                                     ),
                                   )
                                 ],

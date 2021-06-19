@@ -30,19 +30,21 @@ class Description extends StatelessWidget {
                 child: Stack(
                   children: [
                     Positioned(
-                        child: Container(
-                      height: 250,
-                      width: MediaQuery.of(context).size.width,
-                      child: Image.network(
-                        bannerURL,
-                        fit: BoxFit.cover,
+                      child: Container(
+                        height: 250,
+                        width: MediaQuery.of(context).size.width,
+                        child: Image.network(
+                          bannerURL,
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    )),
+                    ),
                     Positioned(
                         bottom: 10,
                         child: modifiedText(
                           text: "  Average Rating - " + vote,
                           size: 20,
+                          color: Colors.black,
                         )),
                   ],
                 ),
@@ -55,6 +57,7 @@ class Description extends StatelessWidget {
                 child: modifiedText(
                   text: name != null ? name : 'Not Loaded',
                   size: 28,
+                  color: Colors.white,
                 ),
               ),
               Container(
@@ -62,6 +65,7 @@ class Description extends StatelessWidget {
                 child: modifiedText(
                   text: 'Releasing on - ' + launchon,
                   size: 16,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(
@@ -85,17 +89,13 @@ class Description extends StatelessWidget {
                         child: modifiedText(
                           text: description,
                           size: 20,
+                          color: Colors.white,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
-              Container(
-                child: modifiedText(
-                  text: genre,
-                ),
-              )
             ],
           ),
         ),
