@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
 
   loadMovie() async {
     TMDB tmdbWithCustomLogs = TMDB(ApiKeys(apiKey, accestoken));
-    logConfig:
+    //logConfig:
     ConfigLogger(
       showLogs: true,
       showErrorLogs: true,
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: modifiedText(
+        title: ModifiedText(
           text: "Alpha's Movie",
           size: 28,
         ),

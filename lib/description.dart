@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:port_folio/utils/text.dart';
 
@@ -41,7 +39,7 @@ class Description extends StatelessWidget {
                     ),
                     Positioned(
                         bottom: 10,
-                        child: modifiedText(
+                        child: ModifiedText(
                           text: "  Average Rating - " + vote,
                           size: 20,
                           color: Colors.black,
@@ -54,7 +52,7 @@ class Description extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.all(10),
-                child: modifiedText(
+                child: ModifiedText(
                   text: name != null ? name : 'Not Loaded',
                   size: 28,
                   color: Colors.white,
@@ -62,7 +60,7 @@ class Description extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.only(left: 10),
-                child: modifiedText(
+                child: ModifiedText(
                   text: 'Releasing on - ' + launchon,
                   size: 16,
                   color: Colors.white,
@@ -86,7 +84,7 @@ class Description extends StatelessWidget {
                     ),
                     Flexible(
                       child: Container(
-                        child: modifiedText(
+                        child: ModifiedText(
                           text: description,
                           size: 20,
                           color: Colors.white,

@@ -15,7 +15,7 @@ class TrendingMovies extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            modifiedText(
+            ModifiedText(
               text: "Trending Movies",
               size: 26,
               color: Colors.white,
@@ -65,7 +65,7 @@ class TrendingMovies extends StatelessWidget {
                                   ),
                                   Expanded(
                                     child: Container(
-                                      child: modifiedText(
+                                      child: ModifiedText(
                                         text: trending[index]['title'] != null
                                             ? trending[index]['title']
                                             : 'Loading',

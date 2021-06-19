@@ -15,7 +15,7 @@ class Toprated extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            modifiedText(
+            ModifiedText(
               text: "Top Rated Movies",
               color: Colors.white,
               size: 26,
@@ -62,7 +62,7 @@ class Toprated extends StatelessWidget {
                             ),
                             Flexible(
                               child: Container(
-                                child: modifiedText(
+                                child: ModifiedText(
                                   text: (toprated[index]['title'] != null)
                                       ? toprated[index]['title']
                                       : 'Loading',
