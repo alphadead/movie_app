@@ -17,6 +17,7 @@ class Toprated extends StatelessWidget {
           children: [
             modifiedText(
               text: "Top Rated Movies",
+              color: Colors.white,
               size: 26,
             ),
             SizedBox(
@@ -31,24 +32,23 @@ class Toprated extends StatelessWidget {
                     return InkWell(
                       onTap: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Description(
-                                      name: toprated[index]['title'],
-                                      bannerURL:
-                                          'https://image.tmdb.org/t/p/w500' +
-                                              toprated[index]['backdrop_path'],
-                                      posterURL:
-                                          'https://image.tmdb.org/t/p/w500' +
-                                              toprated[index]['poster_path'],
-                                      description: toprated[index]['overview'],
-                                      vote: toprated[index]['vote_average']
-                                          .toString(),
-                                      launchon: toprated[index]['release_date'],
-                                    )));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Description(
+                              name: toprated[index]['title'],
+                              bannerURL: 'https://image.tmdb.org/t/p/w500' +
+                                  toprated[index]['backdrop_path'],
+                              posterURL: 'https://image.tmdb.org/t/p/w500' +
+                                  toprated[index]['poster_path'],
+                              description: toprated[index]['overview'],
+                              vote: toprated[index]['vote_average'].toString(),
+                              launchon: toprated[index]['release_date'],
+                            ),
+                          ),
+                        );
                       },
                       child: Container(
-                        width: 140,
+                        width: 150,
                         child: Column(
                           children: [
                             Container(
@@ -60,13 +60,17 @@ class Toprated extends StatelessWidget {
                                             toprated[index]['poster_path'])),
                               ),
                             ),
-                            Container(
-                              child: modifiedText(
-                                text: (toprated[index]['title'] != null)
-                                    ? toprated[index]['title']
-                                    : 'Loading',
+                            Flexible(
+                              child: Container(
+                                child: modifiedText(
+                                  text: (toprated[index]['title'] != null)
+                                      ? toprated[index]['title']
+                                      : 'Loading',
+                                  color: Colors.white,
+                                  size: 16,
+                                ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),

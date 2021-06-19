@@ -18,6 +18,7 @@ class TrendingMovies extends StatelessWidget {
             modifiedText(
               text: "Trending Movies",
               size: 26,
+              color: Colors.white,
             ),
             SizedBox(
               height: 10,
@@ -49,7 +50,7 @@ class TrendingMovies extends StatelessWidget {
                       },
                       child: trending[index]['title'] != null
                           ? Container(
-                              width: 140,
+                              width: 150,
                               child: Column(
                                 children: [
                                   Container(
@@ -62,11 +63,15 @@ class TrendingMovies extends StatelessWidget {
                                                       ['poster_path'])),
                                     ),
                                   ),
-                                  Container(
-                                    child: modifiedText(
-                                      text: trending[index]['title'] != null
-                                          ? trending[index]['title']
-                                          : 'Loading',
+                                  Expanded(
+                                    child: Container(
+                                      child: modifiedText(
+                                        text: trending[index]['title'] != null
+                                            ? trending[index]['title']
+                                            : 'Loading',
+                                        color: Colors.white,
+                                        size: 16,
+                                      ),
                                     ),
                                   )
                                 ],
